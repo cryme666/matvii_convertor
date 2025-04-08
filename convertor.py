@@ -40,7 +40,7 @@ def jpg_to_png(jpg_file_path):
 # txt -> pdf
 
 # xlsx -> csv
-def xlsx_to__csv(xlsx_file_path):
+def xlsx_to_csv(xlsx_file_path):
     df = pd.read_excel(xlsx_file_path)
 
 
@@ -53,6 +53,15 @@ def xlsx_to__csv(xlsx_file_path):
 
 
 # csv -> xlsx
+def csv_to_xlsx(csv_file_path):
+    df = pd.read_csv(csv_file_path)
+
+
+    csv_file_name = csv_file_path.split(FOLDER)[1].split('.')[0] + '.xlsx'
+    new_path = get_new_path(csv_file_name)
+
+    df.to_excel(new_path)
+    return new_path
 
 if __name__ == '__main__':
-    jpg_to_png(FOLDER + 'image.jpg')
+    xlsx_to_csv(FOLDER + 'file.xlsx')

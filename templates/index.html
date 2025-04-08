@@ -1,4 +1,31 @@
-<!-- форма -->
-<!-- поле для вводу файлу -->
-<!-- випадаючий список з опціями -->
-<!-- кнопка -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="convertation" enctype="multipart/form-data">
+        <div>
+            <label for="file">Завантажте файл:</label>
+            <input type="file" name="file" id="file" required>
+
+        </div>
+
+
+        <label for="select">Оберіть тип конвертації:</label>
+        <select id = "select" name = "select" required>
+            <option value = "jpg_to_png">JPG to PNG</option>
+            <option value = "png_tp JPG">PNG to JPG</option>
+            <option value = "csv_to_xslx">CSV to Excel</option>
+            <option value = "xlsx_to_Csv">Excel to CSV</option>
+        </select>
+
+
+        <button type="submit">Конвертувати</button>
+
+
+    </form>
+</body>
+</html>
